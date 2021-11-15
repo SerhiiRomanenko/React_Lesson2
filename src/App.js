@@ -53,6 +53,14 @@ function App() {
           <b>Author: </b>
           {item.author}
         </p>
+        {item.link && (
+          <p>
+            Open link:{" "}
+            <a class="news__link" href={item.link}>
+              {item.link}
+            </a>
+          </p>
+        )}
         <div
           style={{
             borderTop: "2px solid black",
