@@ -31,11 +31,7 @@ function App() {
             <b>Categories: </b>
             {item.categories.map(function (i) {
               return (
-                <a
-                  className={"news__categoryName"}
-                  key={i.id}
-                  href="google.com"
-                >
+                <a className={"news__categoryName"} key={i.id} href="/#">
                   {"  " + i.name + " "}
                 </a>
               );
@@ -56,7 +52,7 @@ function App() {
         {item.link && (
           <p>
             Open link:{" "}
-            <a class="news__link" href={item.link}>
+            <a className="news__link" href={item.link}>
               {item.link}
             </a>
           </p>
