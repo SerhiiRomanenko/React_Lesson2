@@ -23,6 +23,7 @@ function App() {
         <p className="news__date">
           <b>Date of creation: </b>
           {moment(Date.parse(item.dateCreated.slice(0, 19))).format(
+            //   Дату отформатировать по вашему усмотрению .....     заюзал moment
             "DD/MM/YYYY"
           )}
         </p>
@@ -49,7 +50,7 @@ function App() {
           <b>Author: </b>
           {item.author}
         </p>
-        {item.link && (
+        {item.link && ( //    Если ссылка задана - сделать новость ссылкой, если не задана - просто вывести без ссылки.
           <p>
             Open link:{" "}
             <a className="news__link" href={item.link}>
